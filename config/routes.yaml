@@ -1,0 +1,59 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+#ACCUEILCONTROLLER
+acceuil:
+    path: /acceuil
+    controller: 'App\Controller\Acceuil\AcceuilController::index'
+homepage:
+    path: /
+    controller: 'App\Controller\Acceuil\AcceuilController::acceuil'
+accueilclient:
+    path: /accueilclient
+    controller: 'App\Controller\Acceuil\AcceuilController::acceuilclient'
+acceuiladmin:
+    path: /acceuiladmin
+    controller: 'App\Controller\Acceuil\AcceuilController::acceuiladmin'
+#ContactController
+contact:
+    path: /contact
+    controller: 'App\Controller\Contact\ContactController::index'
+contactclient:
+    path: /contactclient
+    controller: 'App\Controller\Contact\ContactController::contact/client'
+#make:auth & make:registration
+register:
+    path: /register
+    controller: App\Controller\RegistrationController::register
+security_login:
+    path: /login
+    controller: Symfony\Bundle\FrameworkBundle\Controller\RedirectController::urlRedirectAction
+security_logout:
+    path: /logout
+login:
+    path: /login
+    controller: App\Controller\SecurityController::login
+# ROUTES ADMIN
+app_contact_edit:
+    path: /contact/edit/{id}
+    controller: App\Controller\ContactController::editContact
+app_contact_delete:
+    path: /contact/delete/{id}
+    controller: App\Controller\ContactController::deleteContact
+app_contact_show:
+    path: '/contact/show/{id}'
+    controller: 'App\Controller\ContactController::showContact'
+    methods: ['GET']
+# ROUTES CLIENT
+app_contact_client_edit:
+    path: /contact/edit/{id}
+    controller: App\Controller\ContactClientController::editContact
+app_contact_client_delete:
+    path: /contact/delete/{id}
+    controller: App\Controller\ContactClientController::deleteContact
+app_contact_client_show:
+    path: '/contact/client/show/{id}'
+    controller: 'App\Controller\ContactClientController::showContact'
+    methods: ['GET']

@@ -1,0 +1,29 @@
+{# contact/add.html.twig #}
+
+{% extends 'admin.html.twig' %}
+
+{% block body %}
+    <h1>Ajouter un contact</h1>
+
+    {# Display potential form errors #}
+    {{ form_errors(form) }}
+
+    {# Start the form #}
+    {{ form_start(form) }}
+
+    {# Render each form field #}
+    {{ form_row(form.nom) }}
+    {{ form_row(form.prenom) }}
+    {{ form_row(form.email) }}
+    {{ form_row(form.telephone) }}
+    {{ form_row(form.usercontact) }}
+
+    {# Render CSRF token #}
+    {{ form_row(form._token) }}
+
+    {# Add a submit button #}
+    <button type="submit" class="btn btn-success">Ajouter</button>
+
+    {# End the form #}
+    {{ form_end(form) }}
+{% endblock %}

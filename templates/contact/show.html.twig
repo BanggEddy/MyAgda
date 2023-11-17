@@ -1,0 +1,28 @@
+{# templates/contact/show.html.twig #}
+
+{% extends 'admin.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <h1>Détails du contact</h1>
+
+        <dl class="row">
+            <dt class="col-sm-3">Nom</dt>
+            <dd class="col-sm-9">{{ contact.nom }}</dd>
+
+            <dt class="col-sm-3">Prénom</dt>
+            <dd class="col-sm-9">{{ contact.prenom }}</dd>
+
+            <dt class="col-sm-3">Email</dt>
+            <dd class="col-sm-9">{{ contact.email }}</dd>
+
+            <dt class="col-sm-3">Téléphone</dt>
+            <dd class="col-sm-9">{{ contact.telephone }}</dd>
+
+            <dt class="col-sm-3">User ID</dt>
+            <dd class="col-sm-9">{{ contact.usercontact }}</dd>
+        </dl>
+
+        <a href="{{ path('app_contact') }}" class="btn btn-secondary mt-3">Retour à la liste des contacts</a>
+    </div>
+{% endblock %}

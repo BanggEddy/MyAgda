@@ -1,0 +1,50 @@
+{% extends 'client.html.twig' %}
+
+{% block title %}Acceuil {% endblock %}
+{% block body %}
+
+<body>
+
+<p style="font-weight:bold;font-size: 30px;">
+MyAgendaDavidLI
+</p> 
+
+<p style="font-weight:bold;font-size: 20px;height:40px;"> Bonjour utilisateur n°{{app.user.id}}</p>
+
+<section id="haut">
+<div class="saut"></div>
+<div class="pre2">
+<center>
+</center>
+</div>
+</section>
+
+</section>
+<div class="saut"></div>
+<div class="container">
+<p>Bonjour bienvenue dans l'accueil de MyAgendaDavidLI</p>
+<br>
+
+
+
+</div>
+
+
+<script src="./index.js"></script>
+
+<!-- Les sources pour tout -->
+
+<!-- Inclure le CSS de Bootstrap -->
+<link rel="stylesheet" href="{{ asset('assets/bootstrap/css/bootstrap.min.css') }}">
+
+<!-- Inclure les scripts JavaScript de Bootstrap (jQuery doit être inclus en premier) -->
+<script src="{{ asset('assets/bootstrap/js/jquery.min.js') }}"></script>
+<script src="{{ asset('assets/bootstrap/js/bootstrap.min.js') }}"></script>
+
+</body>
+
+
+
+</html>
+
+{% endblock %}
